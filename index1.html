@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+  <form name="form" id="form" action="">
+    <div class="container d-block">
+        <h2>Registration Form</h2>
+        <div class="d-flex justify-content-center py-1 input-control">
+            <div class="col-1 px-2 text-end"><label class="form-label" for="">User id:</label></div>
+            <div class="col-4 text-start"><input name="required1" id="userid" oninput="myfunction1()" class="form-control" type="text"></div> 
+        </div> 
+        <div style="display: none;" id="error" class="error text-danger">Required and must be of length 5 to 12.</div>
+        <div class="d-flex justify-content-center py-1">
+            <div class="col-1 px-2 text-end"><label class="form-label" for="">Password:</label></div>
+            <div class="col-4 text-start"><input name="required2" id="password" class="form-control" oninput="myfunction2()" type="password"></div>
+        </div> 
+        <div style="display: none;" id="error1" class="error text-danger">Required and must be of length 7 to 12.</div>
+        <div class="d-flex justify-content-center py-1">
+            <div class="col-1 px-2 text-end"><label class="form-label" for="">Name:</label></div>
+            <div class="col-4 text-start"><input name="required3" id="name" class="form-control" type="text" oninput="myfunction3()"></div>
+        </div> 
+        <div style="display: none;" id="error2" class="error text-danger">Required and alphabetes only.</div>
+        <div class="d-flex justify-content-center py-1">
+            <div class="col-1 px-2 text-end"><label class="form-label" for="">Address:</label></div>
+            <div class="col-4 text-start"><input id="address" onfocus="myfunction4()" onfocusout="myfunction4a()" class="form-control" type="text"></div>
+        </div> 
+        <div style="display: none;" id="error22" class="error text-danger">Optional.</div>
+        <div class="d-flex justify-content-center py-1">
+            <div class="col-1 px-2 text-end"><label class="form-label" for="country">Country:</label></div>
+            <div class="col-4 text-start">
+            <select class="form-select" id="country" onchange="myfunction5()">
+                <option value="selected" selected>Please select a country</option>
+                <option value="count">Rwanda</option>
+                <option value="count">Burundi</option>
+                <option value="count">Tanzanie</option>
+                <option value="count">Uganda</option>
+                <option value="count">Kenya</option>
+            </select>
+            </div>
+        </div> 
+        <div style="display: none;" id="error3" class="error text-danger">Required, must select a country.</div>
+        <div class="d-flex justify-content-center py-1">
+            <div class="col-1 px-2 text-end"><label class="form-label" for="">Zip Code:</label></div>
+            <div class="col-4 text-start"><input name="required6" id="zipcode" class="form-control" type="text" oninput="myfunction6()" ></div>
+        </div> 
+        <div style="display: none;" id="error4" class="error text-danger">Required and must be numeric only.</div>
+        <div class="d-flex justify-content-center py-1">
+            <div class="col-1 px-2 text-end"><label class="form-label" for="">Email:</label></div>
+            <div class="col-4 text-start"><input name="required7" id="email" class="form-control" type="text" oninput="myfunction7()" ></div>
+        </div>
+        <div style="display: none;" id="error5" class="error text-danger">Required and must be a valid email.</div> 
+        <div class="d-flex justify-content-center py-1">
+            <div class="col-1 px-2 text-end"><label class="form-label" for="">Sex:</label></div>
+            <div class="col-4 text-start">
+            <input class="form-check-input" type="radio" id="male" onchange="myfunction8()" name="sex" value="male">
+            <label class="form-check-label" for="male">Male</label>
+            <input class="form-check-input" type="radio" id="female" onchange="myfunction8()" name="sex" value="female">
+            <label class="form-check-label" for="female">Female</label>
+            </div>
+        </div> 
+        <div style="display: none;" id="error6" class="error text-danger">Required.</div>
+        <div class="d-flex justify-content-center py-1">
+            <div class="col-1 px-2 text-end"><label class="form-label" for="">Language:</label></div>
+            <div class="col-4 text-start">
+            <input class="form-check-input" type="checkbox" id="english" onchange="myfunction9()" name="language" >
+            <label class="form-check-label" for="english">English</label>
+            <input class="form-check-input" type="checkbox" id="nonenglish" onchange="myfunction9()" name="language" >
+            <label class="form-check-label" for="nonenglish">Non English</label></div>
+        </div> 
+        <div style="display: none;" id="error7" class="error text-danger">Required.</div>
+        <div class="d-flex justify-content-center py-1">
+            <div class="col-1 px-2 text-end">About: </div>
+            <div class="col-4 text-start"><textarea id="about" class="form-control" onfocus="myfunction10()" onfocusout="myfunction10a()" name="area" id="" cols="30" rows="3"></textarea></div>
+        </div> 
+        <div style="display: none;" id="error8" class="error text-danger">Optional.</div>
+        <input type="submit">
+        
+    </div>
+    </form>
+    <script src="index1.js"></script>
+</body>
+</html>
